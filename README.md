@@ -5,4 +5,4 @@ Hangmaaan
 
 - [ ] Change settings while you play
 
-![Application flow](ui_flow.jpeg)
+![Application flow](ui_flow.jpg)
