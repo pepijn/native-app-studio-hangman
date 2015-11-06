@@ -1,7 +1,7 @@
 Hangmaaan
 =========
 
-A minimalist, evil if you want, Hangman implement.
+A minimalist, possibly evil, Hangman implement.
 
 ## Features
 
