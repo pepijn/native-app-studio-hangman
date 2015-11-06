@@ -1,8 +1,16 @@
 Hangmaaan
 =========
 
+A minimalist, evil if you want, Hangman implement.
+
 ## Features
 
-- [ ] Change settings while you play
+- [ ] Play Hangman on your iPhone
+- [ ] Pick the length of the word that you want to guess
+- [ ] Choose the amount of incorrect guesses that you are allowed to make
+- [ ] Try the 'evil mode' if you're really good or when you want to get punished
+- [ ] Check out your detailed high scores
+- [ ] Restart anytime you want
+- [ ] Adjust settings for your next game while playing
 
 ![Application flow](ui_flow.jpg)
