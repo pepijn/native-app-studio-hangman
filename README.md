@@ -14,4 +14,15 @@ A highly configurable, minimalist and possibly evil Hangman implement.
 - [ ] Restart anytime you want
 - [ ] Adjust settings for your next game while playing
 
+## Application flow
 ![Application flow](ui_flow.jpg)
+
+## Models
+
+![Models](models.jpeg)
+
+## Requirements
+
+### APIs
+
+- NSUserDefaults
