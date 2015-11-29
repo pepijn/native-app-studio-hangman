@@ -14,7 +14,7 @@ class Guess {
     private var wordList: Set<String>
     private var initialStatus: [Character]
 
-    var wordClasses: [(word: String, equivalenceClass: String)] {
+    private var wordClasses: [(word: String, equivalenceClass: String)] {
         return wordList.map { (word) -> (word: String, equivalenceClass: String) in
             let characters = word.characters.enumerate().map({ (index, character) -> Character in
                 if character == guessedLetter {
