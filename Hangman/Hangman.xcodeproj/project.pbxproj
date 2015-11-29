@@ -26,6 +26,10 @@
 		3DAC57CC1C0A55A300AA9CDD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57CA1C0A55A300AA9CDD /* Configuration.swift */; };
 		3DAC57CE1C0A5A8000AA9CDD /* EvilEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57CD1C0A5A8000AA9CDD /* EvilEngine.swift */; };
 		3DAC57CF1C0A5A8000AA9CDD /* EvilEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57CD1C0A5A8000AA9CDD /* EvilEngine.swift */; };
+		3DAC57D11C0A89DF00AA9CDD /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57D01C0A89DF00AA9CDD /* words.plist */; };
+		3DAC57D21C0A89DF00AA9CDD /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57D01C0A89DF00AA9CDD /* words.plist */; };
+		3DAC57D41C0B8C2F00AA9CDD /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */; };
+		3DAC57D51C0B8C2F00AA9CDD /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,8 @@
 		3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HonestEngine.swift; sourceTree = "<group>"; };
 		3DAC57CA1C0A55A300AA9CDD /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		3DAC57CD1C0A5A8000AA9CDD /* EvilEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvilEngine.swift; sourceTree = "<group>"; };
+		3DAC57D01C0A89DF00AA9CDD /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
+		3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				3DAC57BC1C0A3AC600AA9CDD /* small.plist */,
+				3DAC57D01C0A89DF00AA9CDD /* words.plist */,
 				3DAC579C1C0A30F200AA9CDD /* AppDelegate.swift */,
 				3DAC579E1C0A30F200AA9CDD /* ViewController.swift */,
 				3DAC57A01C0A30F200AA9CDD /* Main.storyboard */,
@@ -109,6 +116,7 @@
 				3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */,
 				3DAC57C41C0A3DF500AA9CDD /* WordList.swift */,
 				3DAC57CA1C0A55A300AA9CDD /* Configuration.swift */,
+				3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 				3DAC57A41C0A30F200AA9CDD /* Assets.xcassets in Resources */,
 				3DAC57BD1C0A3AC600AA9CDD /* small.plist in Resources */,
 				3DAC57A21C0A30F200AA9CDD /* Main.storyboard in Resources */,
+				3DAC57D11C0A89DF00AA9CDD /* words.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAC57D21C0A89DF00AA9CDD /* words.plist in Resources */,
 				3DAC57BE1C0A3AC600AA9CDD /* small.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +243,7 @@
 				3DAC579F1C0A30F200AA9CDD /* ViewController.swift in Sources */,
 				3DAC57C51C0A3DF500AA9CDD /* WordList.swift in Sources */,
 				3DAC57C01C0A3AEA00AA9CDD /* Engine.swift in Sources */,
+				3DAC57D41C0B8C2F00AA9CDD /* Guess.swift in Sources */,
 				3DAC57C81C0A460300AA9CDD /* HonestEngine.swift in Sources */,
 				3DAC579D1C0A30F200AA9CDD /* AppDelegate.swift in Sources */,
 			);
@@ -247,6 +258,7 @@
 				3DAC57B21C0A30F200AA9CDD /* HangmanTests.swift in Sources */,
 				3DAC57C61C0A3DF500AA9CDD /* WordList.swift in Sources */,
 				3DAC57C31C0A3B5400AA9CDD /* EngineTests.swift in Sources */,
+				3DAC57D51C0B8C2F00AA9CDD /* Guess.swift in Sources */,
 				3DAC57C91C0A460300AA9CDD /* HonestEngine.swift in Sources */,
 				3DAC57C11C0A3AEA00AA9CDD /* Engine.swift in Sources */,
 			);

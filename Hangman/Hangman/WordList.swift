@@ -10,14 +10,13 @@ import Foundation
 
 class WordList {
     static var sharedInstance = WordList()
-    var wordList: [String]
+    var wordList: Set<String>
 
     init() {
         let path = NSBundle.mainBundle().pathForResource("small", ofType: "plist")!
         let words = NSArray(contentsOfFile: path) as! [String]
-        self.wordList = words.map({ (word) -> String in
+        self.wordList = Set(words.map({ (word) -> String in
             return word.lowercaseString
-        })
-        print(wordList)
+        }))
     }
 }
