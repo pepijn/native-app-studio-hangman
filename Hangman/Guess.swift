@@ -10,9 +10,9 @@ import Foundation
 
 class Guess {
     static private let unknownCharacter = Character("-")
-    private var guessedLetter: Character
-    private var wordList: Set<String>
-    private var initialStatus: [Character]
+    private let guessedLetter: Character
+    private let wordList: Set<String>
+    private let initialStatus: [Character]
 
     private var wordClasses: [(word: String, equivalenceClass: String)] {
         return wordList.map { (word) -> (word: String, equivalenceClass: String) in
