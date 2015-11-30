@@ -59,10 +59,12 @@ class Guess {
         return Array(favoredEquivalenceClass.characters) != initialStatus
     }
 
-    init(letter: String, previousGuess: Guess) {
-        self.guessedLetter = Character(letter.lowercaseString)
-        self.wordList = previousGuess.remainingWordList
-        self.initialStatus = Array(previousGuess.favoredEquivalenceClass.characters)
+    convenience init(letter: String, previousGuess: Guess) {
+        self.init(
+            letter: letter,
+            wordList: previousGuess.remainingWordList,
+            status: previousGuess.favoredEquivalenceClass
+        )
     }
 
     init(letter: String, wordList: Set<String>, status: String? = nil) {

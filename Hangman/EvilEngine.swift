@@ -47,19 +47,19 @@ class EvilEngine {
         }).joinWithSeparator("")
     }
 
-    var failed: Bool {
+    var lostGame: Bool {
         if incorrectlyGuessedLetters.count >= maxMistakes {
             return true
         }
         return false
     }
 
-    var won: Bool {
+    var wonGame: Bool {
         return status.filter { $0 == nil }.count == 0
     }
 
-    var finished: Bool {
-        if failed || won {
+    var finishedGame: Bool {
+        if lostGame || wonGame {
             return true
         }
         return false
@@ -72,7 +72,7 @@ class EvilEngine {
     }
 
     func guessLetter(letter: String) -> Bool {
-        if finished {
+        if finishedGame {
             return false
         }
 

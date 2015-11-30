@@ -30,18 +30,20 @@ class EngineTests: XCTestCase {
         XCTAssert(engine.guessLetter("u"))
         XCTAssert(engine.guessLetter("c"))
         XCTAssertEqual(engine.description, "duc-")
+        XCTAssertFalse(engine.wonGame)
         XCTAssert(engine.guessLetter("k"))
         XCTAssertEqual(engine.correctlyGuessedLetters, Set(["d", "u", "c", "k"]))
-        XCTAssert(engine.finished)
-        XCTAssert(engine.won)
+        XCTAssert(engine.finishedGame)
+        XCTAssert(engine.wonGame)
+        XCTAssertFalse(engine.lostGame)
     }
 
     func testFailure() {
         let engine = EvilEngine.init(wordList: wordList, maxMistakes: 2)
         XCTAssertFalse(engine.guessLetter("e"))
         XCTAssertFalse(engine.guessLetter("b"))
-        XCTAssert(engine.failed)
-        XCTAssert(engine.finished)
+        XCTAssert(engine.lostGame)
+        XCTAssert(engine.finishedGame)
         XCTAssertFalse(engine.guessLetter("d"))
     }
 
@@ -53,4 +55,3 @@ class EngineTests: XCTestCase {
     }
 
 }
-
