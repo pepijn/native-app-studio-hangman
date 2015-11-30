@@ -60,7 +60,7 @@ class GuessTests: XCTestCase {
         XCTAssertFalse(guess.correctGuess)
 
         guess = Guess.init(letter: "u", previousGuess: guess)
-        XCTAssert(guess.correctGuess)
+        XCTAssertTrue(guess.correctGuess)
 
         guess = Guess.init(letter: "c", previousGuess: guess)
         guess = Guess.init(letter: "k", previousGuess: guess)

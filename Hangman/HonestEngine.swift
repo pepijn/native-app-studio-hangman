@@ -8,7 +8,8 @@
 
 import Foundation
 
-class HonestEngine : EvilEngine {
+class HonestEngine : Engine {
+    /*
     private var staticWord: String
     override var word: String {
         return staticWord
@@ -21,4 +22,5 @@ class HonestEngine : EvilEngine {
     func getWord() -> String {
         return staticWord
     }
+*/
 }

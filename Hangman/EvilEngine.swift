@@ -8,54 +8,34 @@
 
 import Foundation
 
-class EvilEngine : Engine {
-    var availableWords: [String] {
-        return WordList.sharedInstance.wordList.filter { (word) -> Bool in
-            for (index, character) in word.characters.enumerate() {
-                if status[index] != nil && status[index] != character {
-                    return false
-                }
-            }
-            return true
-        }
+class EvilEngine {
+    static private let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    static private var allLetters: Set<Character> {
+        return Set(alphabet.characters)
     }
 
-    var word: String {
-        let wordList = guessedLetters.reduce(WordList.sharedInstance.wordList) { (wordList, character) -> Set<String> in
-            print(character)
-            print(wordList)
+    private var wordList: Set<String>
+    var status: [Character?]
+    let maxMistakes: Int
 
-            let indexSets = wordList.map({ (word) -> (String, Set<Int>) in
-                let characters = word.characters.enumerate().map { ($0.element, $0.index) }
-                let filtered = characters.filter { $0.0 == character }
-                return (word, Set(filtered.map { $0.1 }))
-            })
-            print(indexSets)
-            let equivalenceClasses = Set(indexSets.map { $0.1 })
-            print(equivalenceClasses)
-            return wordList
-        }
-        print(wordList)
-        print("\n")
-        return wordList.first!
-        //return sortedWords.last!.0
+    // Use an array to keep chronological history of guesses
+    internal(set) var guesses = [Character]()
+
+    // Use a set for easier comparisons
+    internal var guessedLetters: Set<Character> {
+        return Set(guesses)
+    }
+
+    var availableLetters: Set<Character> {
+        return EvilEngine.allLetters.subtract(guessedLetters)
     }
 
     var correctlyGuessedLetters: Set<Character> {
-        return guessedLetters.intersect(Set(word.characters))
+        return Set(description.characters.filter { $0 != "-" })
     }
 
     var incorrectlyGuessedLetters: Set<Character> {
         return guessedLetters.subtract(correctlyGuessedLetters)
-    }
-
-    var status: [Character?] {
-        return word.characters.map { (character) -> Character? in
-            if guessedLetters.contains(character) {
-                return character
-            }
-            return nil
-        }
     }
 
     var description: String {
@@ -63,20 +43,52 @@ class EvilEngine : Engine {
             if character != nil {
                 return String(character!)
             }
-            return Engine.unknownLetter
+            return "-"
         }).joinWithSeparator("")
     }
 
-    func guessLetter(string: String) -> Bool {
-        return guessLetter(Character.init(string))
+    var failed: Bool {
+        if incorrectlyGuessedLetters.count >= maxMistakes {
+            return true
+        }
+        return false
     }
 
-    func guessLetter(character: Character) -> Bool {
-        if !guessedLetters.contains(character) {
-            // Prevent already guessed characters from being stored again
-            guesses.append(character)
+    var won: Bool {
+        return status.filter { $0 == nil }.count == 0
+    }
+
+    var finished: Bool {
+        if failed || won {
+            return true
+        }
+        return false
+    }
+
+    init(wordList: Set<String>, maxMistakes: Int) {
+        self.wordList = wordList
+        self.maxMistakes = maxMistakes
+        self.status = [Character?](count: wordList.first!.characters.count, repeatedValue: nil)
+    }
+
+    func guessLetter(letter: String) -> Bool {
+        if finished {
+            return false
         }
 
-        return word.containsString(String(character))
+        if !guessedLetters.contains(Character(letter)) {
+            // Prevent already guessed characters from being stored again
+            guesses.append(Character(letter))
+        }
+
+        let guess = Guess.init(letter: letter, wordList: wordList, status: description)
+        self.wordList = guess.remainingWordList
+        self.status = guess.favoredEquivalenceClass.characters.map({ (char) -> Character? in
+            if char == "-" {
+                return nil
+            }
+            return char
+        })
+        return guess.correctGuess
     }
 }

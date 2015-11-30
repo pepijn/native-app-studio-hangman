@@ -30,6 +30,7 @@
 		3DAC57D21C0A89DF00AA9CDD /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57D01C0A89DF00AA9CDD /* words.plist */; };
 		3DAC57D41C0B8C2F00AA9CDD /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */; };
 		3DAC57D51C0B8C2F00AA9CDD /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */; };
+		3DAC57D71C0C5A6000AA9CDD /* EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3DAC57CD1C0A5A8000AA9CDD /* EvilEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvilEngine.swift; sourceTree = "<group>"; };
 		3DAC57D01C0A89DF00AA9CDD /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
+		3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				3DAC57B11C0A30F200AA9CDD /* HangmanTests.swift */,
 				3DAC57B31C0A30F200AA9CDD /* Info.plist */,
 				3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */,
+				3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */,
 			);
 			path = HangmanTests;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				3DAC57B21C0A30F200AA9CDD /* HangmanTests.swift in Sources */,
 				3DAC57C61C0A3DF500AA9CDD /* WordList.swift in Sources */,
 				3DAC57C31C0A3B5400AA9CDD /* GuessTests.swift in Sources */,
+				3DAC57D71C0C5A6000AA9CDD /* EngineTests.swift in Sources */,
 				3DAC57D51C0B8C2F00AA9CDD /* Guess.swift in Sources */,
 				3DAC57C91C0A460300AA9CDD /* HonestEngine.swift in Sources */,
 				3DAC57C11C0A3AEA00AA9CDD /* Engine.swift in Sources */,

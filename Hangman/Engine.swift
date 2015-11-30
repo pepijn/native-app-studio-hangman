@@ -9,7 +9,7 @@
 import Foundation
 
 class Engine {
-    static private var alphabet = "abcdefghijklmnopqrstuvwxyz"
+    static private let alphabet = "abcdefghijklmnopqrstuvwxyz"
     static private var allLetters: Set<Character> {
         return Set(alphabet.characters)
     }

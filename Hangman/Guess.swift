@@ -59,16 +59,22 @@ class Guess {
         return Array(favoredEquivalenceClass.characters) != initialStatus
     }
 
-    init(letter: String, wordList: Set<String>? = nil, previousGuess: Guess? = nil) {
+    init(letter: String, previousGuess: Guess) {
         self.guessedLetter = Character(letter.lowercaseString)
-        if previousGuess == nil {
-            self.wordList = wordList!
-            self.initialStatus = wordList!.first!.characters.map({ (_) -> Character in
+        self.wordList = previousGuess.remainingWordList
+        self.initialStatus = Array(previousGuess.favoredEquivalenceClass.characters)
+    }
+
+    init(letter: String, wordList: Set<String>, status: String? = nil) {
+        self.guessedLetter = Character(letter.lowercaseString)
+        self.wordList = wordList
+
+        if status == nil {
+            self.initialStatus = wordList.first!.characters.map({ (_) -> Character in
                 return Guess.unknownCharacter
             })
         } else {
-            self.wordList = previousGuess!.remainingWordList
-            self.initialStatus = Array(previousGuess!.favoredEquivalenceClass.characters)
+            self.initialStatus = Array(status!.characters)
         }
     }
 }
