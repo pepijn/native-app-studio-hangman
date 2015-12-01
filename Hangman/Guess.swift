@@ -72,9 +72,7 @@ class Guess {
         self.wordList = wordList
 
         if status == nil {
-            self.initialStatus = wordList.first!.characters.map({ (_) -> Character in
-                return Guess.unknownCharacter
-            })
+            self.initialStatus = [Character](count: wordList.first!.characters.count, repeatedValue: Guess.unknownCharacter)
         } else {
             self.initialStatus = Array(status!.characters)
         }

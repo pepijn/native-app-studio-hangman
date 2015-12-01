@@ -21,7 +21,7 @@ class EngineTests: XCTestCase {
     }
 
     func testCompletion() {
-        let engine = EvilEngine.init(wordList: wordList, maxMistakes: 3)
+        let engine = EvilEngine.init(words: wordList, maxMistakes: 3)
         XCTAssertEqual(engine.description, "----")
         XCTAssertFalse(engine.guessLetter("e"))
         XCTAssertFalse(engine.guessLetter("b"))
@@ -39,11 +39,13 @@ class EngineTests: XCTestCase {
     }
 
     func testFailure() {
-        let engine = EvilEngine.init(wordList: wordList, maxMistakes: 2)
+        let engine = HonestEngine.init(word: "duck", maxMistakes: 2)
         XCTAssertFalse(engine.guessLetter("e"))
+        XCTAssertFalse(engine.finishedGame)
         XCTAssertFalse(engine.guessLetter("b"))
         XCTAssert(engine.lostGame)
         XCTAssert(engine.finishedGame)
+        XCTAssertFalse(engine.wonGame)
         XCTAssertFalse(engine.guessLetter("d"))
     }
 
@@ -53,5 +55,4 @@ class EngineTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

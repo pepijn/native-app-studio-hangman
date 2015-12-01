@@ -116,9 +116,9 @@
 				3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */,
 				3DAC57CD1C0A5A8000AA9CDD /* EvilEngine.swift */,
 				3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */,
+				3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */,
 				3DAC57C41C0A3DF500AA9CDD /* WordList.swift */,
 				3DAC57CA1C0A55A300AA9CDD /* Configuration.swift */,
-				3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";

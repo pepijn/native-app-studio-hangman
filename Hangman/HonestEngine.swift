@@ -9,18 +9,7 @@
 import Foundation
 
 class HonestEngine : Engine {
-    /*
-    private var staticWord: String
-    override var word: String {
-        return staticWord
+    init(word: String, maxMistakes: Int) {
+        super.init(wordList: Set([word]), maxMistakes: maxMistakes)
     }
-
-    init(word: String) {
-        self.staticWord = word
-    }
-
-    func getWord() -> String {
-        return staticWord
-    }
-*/
 }
