@@ -9,16 +9,20 @@
 import Foundation
 
 class Configuration {
-    static var defaultMaxIncorrectGuesses = 10
-    static var defaultIsEvilMode = true
+    static private let defaultMaxIncorrectGuesses = 10
+    static private let defaultIsEvilMode = true
 
-    static var sharedInstance = Configuration()
+    static let sharedInstance = Configuration()
 
-    var lengthOfWord: Int
+    var lengthOfWord = WordList.sharedInstance.wordList.first!.characters.count
     var maxIncorrectGuesses = defaultMaxIncorrectGuesses
     var evilMode = defaultIsEvilMode
 
-    init() {
-        self.lengthOfWord = WordList.sharedInstance.wordList.first!.characters.count
+    var engine: Engine {
+        if evilMode {
+            return EvilEngine.init(words: WordList.sharedInstance.nLetterWords(lengthOfWord), maxMistakes: maxIncorrectGuesses)
+        } else {
+            return HonestEngine.init(word: WordList.sharedInstance.nLetterWord(lengthOfWord), maxMistakes: maxIncorrectGuesses)
+        }
     }
 }

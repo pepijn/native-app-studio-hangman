@@ -19,4 +19,16 @@ class WordList {
             return word.lowercaseString
         }))
     }
+
+    func nLetterWords(letters: Int) -> Set<String> {
+        return Set(wordList.filter({ (word) -> Bool in
+            return word.characters.count == letters
+        }))
+    }
+
+    func nLetterWord(letters: Int) -> String {
+        let wordList = nLetterWords(letters)
+        let randomIndex = Int(rand()) % wordList.count
+        return Array(wordList)[randomIndex]
+    }
 }

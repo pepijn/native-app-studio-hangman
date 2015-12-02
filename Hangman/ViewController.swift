@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var entryField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        entryField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +25,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func enteredLetter(sender: UITextField) {
+        print(sender.text!)
+        sender.text = ""
+    }
 }
-
