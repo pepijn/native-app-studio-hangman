@@ -26,7 +26,7 @@ class GuessTests: XCTestCase {
     }
 
     func testGuessR() {
-        let guess = Guess.init(letter: "R", wordList: wordList)
+        let guess = Guess.init(letter: "r", wordList: wordList)
         let expectedClasses = [
             "----": Set(["duck"]),
             "---r": Set(["bear", "boar", "deer"]),

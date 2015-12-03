@@ -80,12 +80,18 @@ class Engine {
             return false
         }
 
-        if !guessedLetters.contains(Character(letter)) {
-            // Prevent already guessed characters from being stored again
-            guesses.append(Character(letter))
+        let character = Character(letter.lowercaseString)
+
+        if !Engine.allLetters.contains(character) {
+            return false
         }
 
-        let guess = Guess.init(letter: letter, wordList: wordList, status: description)
+        if !guessedLetters.contains(character) {
+            // Prevent already guessed characters from being stored again
+            guesses.append(character)
+        }
+
+        let guess = Guess.init(character: character, wordList: wordList, status: description)
         self.wordList = guess.remainingWordList
         self.status = guess.favoredEquivalenceClass.characters.map({ (char) -> Character? in
             if char == "-" {

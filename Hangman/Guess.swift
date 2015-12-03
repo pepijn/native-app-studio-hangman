@@ -67,8 +67,12 @@ class Guess {
         )
     }
 
-    init(letter: String, wordList: Set<String>, status: String? = nil) {
-        self.guessedLetter = Character(letter.lowercaseString)
+    init(letter: String? = nil, var character: Character? = nil, wordList: Set<String>, status: String? = nil) {
+        if letter != nil {
+            character = Character(letter!)
+        }
+
+        self.guessedLetter = character!
         self.wordList = wordList
 
         if status == nil {

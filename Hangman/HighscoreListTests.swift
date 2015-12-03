@@ -12,7 +12,8 @@ class HighscoreListTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        HighscoreList.sharedInstance.reset()
     }
     
     override func tearDown() {
@@ -21,8 +22,13 @@ class HighscoreListTests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let word = "test"
+        let mistakes = 3
+        HighscoreList.sharedInstance.submitHighscore(word, mistakes: mistakes)
+        var expected = [[String: AnyObject]]()
+        expected.append(["word" : word, "mistakes": mistakes])
+        XCTAssertEqual(HighscoreList.sharedInstance.highscores.count, 1)
+        XCTAssertEqual(HighscoreList.sharedInstance.highscores, expected)
     }
 
     func testPerformanceExample() {

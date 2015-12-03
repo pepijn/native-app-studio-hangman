@@ -35,6 +35,7 @@
 		3DCC0BFF1C10789C0012B083 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0BFE1C10789C0012B083 /* ConfigurationViewController.swift */; };
 		3DCC0C031C10A8D20012B083 /* HighscoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0C021C10A8D20012B083 /* HighscoreList.swift */; };
 		3DCC0C051C10CF9A0012B083 /* HighscoreListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0C041C10CF9A0012B083 /* HighscoreListTests.swift */; };
+		3DCC0C061C10D0930012B083 /* HighscoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0C021C10A8D20012B083 /* HighscoreList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,6 +297,7 @@
 				3DAC57D71C0C5A6000AA9CDD /* EngineTests.swift in Sources */,
 				3DAC57D51C0B8C2F00AA9CDD /* Guess.swift in Sources */,
 				3DAC57C91C0A460300AA9CDD /* HonestEngine.swift in Sources */,
+				3DCC0C061C10D0930012B083 /* HighscoreList.swift in Sources */,
 				3DAC57C11C0A3AEA00AA9CDD /* Engine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
