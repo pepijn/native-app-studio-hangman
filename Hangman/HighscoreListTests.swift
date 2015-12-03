@@ -24,11 +24,14 @@ class HighscoreListTests: XCTestCase {
     func testExample() {
         let word = "test"
         let mistakes = 3
+        HighscoreList.sharedInstance.submitHighscore(word, mistakes: mistakes + 1)
         HighscoreList.sharedInstance.submitHighscore(word, mistakes: mistakes)
-        var expected = [[String: AnyObject]]()
-        expected.append(["word" : word, "mistakes": mistakes])
-        XCTAssertEqual(HighscoreList.sharedInstance.highscores.count, 1)
-        XCTAssertEqual(HighscoreList.sharedInstance.highscores, expected)
+        XCTAssertEqual(HighscoreList.sharedInstance.highscores.count, 2)
+
+        let bestHighscore = HighscoreList.sharedInstance.highscores.first!
+        XCTAssert(bestHighscore.mostRecent)
+        XCTAssertEqual(bestHighscore.word, "test")
+        XCTAssertEqual(bestHighscore.mistakes, 3)
     }
 
     func testPerformanceExample() {

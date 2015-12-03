@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameViewController.swift
 //  Hangman
 //
 //  Created by Pepijn Looije on 28/11/15.
@@ -8,12 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var entryField: UITextField!
     @IBOutlet weak var remainingGuesses: UILabel!
     @IBOutlet weak var winnerMessage: UILabel!
     @IBOutlet weak var loserMessage: UILabel!
+    @IBOutlet weak var highscoresTableView: UITableView!
+
+    let highscoresViewController = HighscoresViewController.init()
 
     var engine: Engine? {
         didSet {
@@ -24,6 +27,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        highscoresTableView.delegate = highscoresViewController
+        highscoresTableView.dataSource = highscoresViewController
 
         restartGame(nil)
     }
@@ -55,11 +61,22 @@ class ViewController: UIViewController {
             return
         }
         
-        if engine!.wonGame {
-            winnerMessage.hidden = false
-        } else {
+        gameFinished()
+    }
+
+    func gameFinished() {
+        if engine!.lostGame {
             loserMessage.hidden = false
+            return
         }
+
+        loserMessage.hidden = false
+
+        let word = engine!.description
+        let mistakes = engine!.incorrectlyGuessedLetters.count
+
+        HighscoreList.sharedInstance.submitHighscore(word, mistakes: mistakes)
+        highscoresTableView.reloadData()
     }
 
     @IBAction func restartGame(sender: AnyObject?) {

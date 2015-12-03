@@ -10,9 +10,11 @@ import Foundation
 
 class HighscoreList {
     static private let userDefaultsKey = "highscores"
+    static private let wordKey = "word"
+    static private let mistakesKey = "mistakes"
     static let sharedInstance = HighscoreList()
 
-    var highscores: [[String: AnyObject]] {
+    private var _highscores: [[String: AnyObject]] {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         var highscores = userDefaults.objectForKey(HighscoreList.userDefaultsKey)
 
@@ -24,17 +26,26 @@ class HighscoreList {
         return highscores as! [[String: AnyObject]]
     }
 
+    var highscores: [Highscore] {
+        return _highscores.enumerate().map { (index, highscore) -> Highscore in
+            let word = highscore[HighscoreList.wordKey] as! String
+            let mistakes = highscore[HighscoreList.mistakesKey] as! Int
+            let mostRecent = index + 1 == _highscores.count
+            return Highscore.init(word: word, mistakes: mistakes, mostRecent: mostRecent)
+        }.sort { $0.0.mistakes < $0.1.mistakes }
+    }
+
     func submitHighscore(word: String, mistakes: Int) {
-        var tempHighscores = highscores
+        var tempHighscores = _highscores
         var entry = [String: AnyObject]()
-        entry["word"] = word
-        entry["mistakes"] = mistakes
+        entry[HighscoreList.wordKey] = word
+        entry[HighscoreList.mistakesKey] = mistakes
         tempHighscores.append(entry)
         saveHighscores(tempHighscores)
     }
 
     func reset() {
-        var tempHighscores = highscores
+        var tempHighscores = _highscores
         tempHighscores.removeAll()
         saveHighscores(tempHighscores)
     }
