@@ -9,6 +9,7 @@
 import Foundation
 
 class Configuration {
+    static let maxMaxIncorrectGuesses = 26
     static private let defaultMaxIncorrectGuesses = 10
     static private let defaultIsEvilMode = true
 
@@ -20,7 +21,8 @@ class Configuration {
 
     var engine: Engine {
         if evilMode {
-            return EvilEngine.init(words: WordList.sharedInstance.nLetterWords(lengthOfWord), maxMistakes: maxIncorrectGuesses)
+            let words = WordList.sharedInstance.nLetterWords(lengthOfWord)
+            return EvilEngine.init(words: words, maxMistakes: maxIncorrectGuesses)
         } else {
             return HonestEngine.init(word: WordList.sharedInstance.nLetterWord(lengthOfWord), maxMistakes: maxIncorrectGuesses)
         }

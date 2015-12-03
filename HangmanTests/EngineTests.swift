@@ -40,11 +40,14 @@ class EngineTests: XCTestCase {
 
     func testFailure() {
         let engine = HonestEngine.init(word: "duck", maxMistakes: 2)
+        XCTAssertEqual(engine.incorrectGuessesRemaining, 2)
         XCTAssertFalse(engine.guessLetter("e"))
+        XCTAssertEqual(engine.incorrectGuessesRemaining, 1)
         XCTAssertFalse(engine.finishedGame)
         XCTAssertFalse(engine.guessLetter("b"))
         XCTAssert(engine.lostGame)
         XCTAssert(engine.finishedGame)
+        XCTAssertEqual(engine.incorrectGuessesRemaining, 0)
         XCTAssertFalse(engine.wonGame)
         XCTAssertFalse(engine.guessLetter("d"))
     }

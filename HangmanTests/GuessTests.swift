@@ -13,11 +13,13 @@ class GuessTests: XCTestCase {
 
     func testGuessE() {
         let guess = Guess.init(letter: "e", wordList: wordList)
+
         var expectedClasses = [String: Set<String>]()
         expectedClasses["----"] = Set(["boar", "duck"])
         expectedClasses["-e--"] = Set(["bear"])
         expectedClasses["-ee-"] = Set(["deer"])
         expectedClasses["---e"] = Set(["hare"])
+
         XCTAssertEqual(guess.equivalenceClasses, expectedClasses)
         XCTAssertEqual(guess.favoredEquivalenceClass, "----")
         XCTAssertEqual(guess.remainingWordList, Set(["boar", "duck"]))

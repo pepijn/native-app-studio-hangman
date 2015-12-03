@@ -19,10 +19,10 @@ class Engine {
     let maxMistakes: Int
 
     // Use an array to keep chronological history of guesses
-    internal(set) var guesses = [Character]()
+    private(set) var guesses = [Character]()
 
     // Use a set for easier comparisons
-    internal var guessedLetters: Set<Character> {
+    var guessedLetters: Set<Character> {
         return Set(guesses)
     }
 
@@ -45,6 +45,10 @@ class Engine {
             }
             return "-"
         }).joinWithSeparator("")
+    }
+
+    var incorrectGuessesRemaining: Int {
+        return maxMistakes - incorrectlyGuessedLetters.count
     }
 
     var lostGame: Bool {

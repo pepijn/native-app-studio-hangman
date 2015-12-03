@@ -9,8 +9,12 @@
 import Foundation
 
 class WordList {
-    static var sharedInstance = WordList()
-    var wordList: Set<String>
+    static let sharedInstance = WordList()
+    let wordList: Set<String>
+
+    let minimumWordLength: Int
+
+    let maximumWordLength: Int
 
     init() {
         let path = NSBundle.mainBundle().pathForResource("small", ofType: "plist")!
@@ -18,6 +22,10 @@ class WordList {
         self.wordList = Set(words.map({ (word) -> String in
             return word.lowercaseString
         }))
+
+        let wordLengths = wordList.map { Int($0.characters.count) }
+        self.minimumWordLength = wordLengths.minElement()!
+        self.maximumWordLength = wordLengths.maxElement()!
     }
 
     func nLetterWords(letters: Int) -> Set<String> {
