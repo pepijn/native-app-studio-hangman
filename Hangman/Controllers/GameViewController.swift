@@ -70,7 +70,7 @@ class GameViewController: UIViewController {
             return
         }
 
-        loserMessage.hidden = false
+        winnerMessage.hidden = false
 
         let word = engine!.description
         let mistakes = engine!.incorrectlyGuessedLetters.count

@@ -27,12 +27,15 @@ class HighscoreList {
     }
 
     var highscores: [Highscore] {
-        return _highscores.enumerate().map { (index, highscore) -> Highscore in
+        let list = _highscores.enumerate().map { (index, highscore) -> Highscore in
             let word = highscore[HighscoreList.wordKey] as! String
             let mistakes = highscore[HighscoreList.mistakesKey] as! Int
             let mostRecent = index + 1 == _highscores.count
             return Highscore.init(word: word, mistakes: mistakes, mostRecent: mostRecent)
-        }.sort { $0.0.mistakes < $0.1.mistakes }
+        }
+
+        // TODO: sort by mistakes and mostRecent
+        return list.sort { $0.0.mistakes < $0.1.mistakes }
     }
 
     func submitHighscore(word: String, mistakes: Int) {

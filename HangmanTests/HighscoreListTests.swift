@@ -21,7 +21,7 @@ class HighscoreListTests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testHighscores() {
         let word = "test"
         let mistakes = 3
         HighscoreList.sharedInstance.submitHighscore(word, mistakes: mistakes + 1)

@@ -22,54 +22,68 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZe-NL-TyM">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="316"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AH-8q-wu0">
-                                                <rect key="frame" x="20" y="258" width="560" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-2u-UC3">
+                                                <rect key="frame" x="20" y="126" width="560" height="21"/>
                                                 <animations/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fP7-IV-bXE">
-                                                <rect key="frame" x="0.0" y="-64" width="25" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqW-A7-SbN">
+                                                <rect key="frame" x="20" y="68" width="560" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loser!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewe-u0-QTp">
+                                                <rect key="frame" x="20" y="97" width="560" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-er-5co">
+                                                <rect key="frame" x="252" y="155" width="97" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
                                                 <connections>
-                                                    <action selector="enteredLetter:" destination="BYZ-38-t0r" eventType="editingChanged" id="beE-yh-ne3"/>
+                                                    <action selector="enteredLetter:" destination="BYZ-38-t0r" eventType="editingChanged" id="8gI-W7-QnN"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-2u-UC3">
-                                                <rect key="frame" x="20" y="258" width="560" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AH-8q-wu0">
+                                                <rect key="frame" x="20" y="26" width="560" height="21"/>
                                                 <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loser!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewe-u0-QTp">
-                                                <rect key="frame" x="20" y="201" width="560" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqW-A7-SbN">
-                                                <rect key="frame" x="20" y="19" width="560" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="FiP-2u-UC3" firstAttribute="leading" secondItem="Ewe-u0-QTp" secondAttribute="leading" id="3wL-eP-wOT"/>
+                                            <constraint firstItem="0AH-8q-wu0" firstAttribute="leading" secondItem="OZe-NL-TyM" secondAttribute="leading" constant="20" id="5rr-Ak-WuH"/>
+                                            <constraint firstItem="Ewe-u0-QTp" firstAttribute="centerX" secondItem="OZe-NL-TyM" secondAttribute="centerX" id="Abm-l9-oSm"/>
+                                            <constraint firstItem="Ewe-u0-QTp" firstAttribute="top" secondItem="dqW-A7-SbN" secondAttribute="bottom" constant="8" symbolic="YES" id="GVP-61-xMn"/>
+                                            <constraint firstItem="dqW-A7-SbN" firstAttribute="trailing" secondItem="Ewe-u0-QTp" secondAttribute="trailing" id="GZe-CH-t2q"/>
+                                            <constraint firstItem="dqW-A7-SbN" firstAttribute="leading" secondItem="0AH-8q-wu0" secondAttribute="leading" id="Ipk-hg-b8o"/>
+                                            <constraint firstItem="0AH-8q-wu0" firstAttribute="trailing" secondItem="dqW-A7-SbN" secondAttribute="trailing" id="M2u-GY-qQ4"/>
+                                            <constraint firstItem="Ewe-u0-QTp" firstAttribute="trailing" secondItem="FiP-2u-UC3" secondAttribute="trailing" id="S5z-6c-bGA"/>
+                                            <constraint firstItem="Ewe-u0-QTp" firstAttribute="leading" secondItem="dqW-A7-SbN" secondAttribute="leading" id="jRU-Kw-Bts"/>
+                                            <constraint firstItem="FiP-2u-UC3" firstAttribute="top" secondItem="Ewe-u0-QTp" secondAttribute="bottom" constant="8" symbolic="YES" id="k1Q-85-Axb"/>
+                                            <constraint firstItem="0AH-8q-wu0" firstAttribute="top" secondItem="OZe-NL-TyM" secondAttribute="top" constant="26" id="oUS-iV-LPX"/>
+                                            <constraint firstItem="dqW-A7-SbN" firstAttribute="top" secondItem="0AH-8q-wu0" secondAttribute="bottom" constant="21" id="pL1-wd-PHB"/>
+                                        </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v6U-4Z-ftl">
-                                        <rect key="frame" x="0.0" y="336" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="316" width="600" height="220"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="4lz-MN-GMP"/>
+                                            <constraint firstAttribute="height" constant="220" id="4lz-MN-GMP"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="mostRecent" textLabel="iKj-ub-8sH" detailTextLabel="Ogm-Ns-Xyp" style="IBUITableViewCellStyleSubtitle" id="vKm-S3-ghF">
@@ -156,7 +170,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="entryField" destination="fP7-IV-bXE" id="oQc-Kh-XU0"/>
+                        <outlet property="entryField" destination="hgD-er-5co" id="liC-pk-HK5"/>
                         <outlet property="highscoresTableView" destination="v6U-4Z-ftl" id="VC8-eZ-jNd"/>
                         <outlet property="loserMessage" destination="Ewe-u0-QTp" id="fyb-N9-nkC"/>
                         <outlet property="remainingGuesses" destination="FiP-2u-UC3" id="vYq-gF-hnt"/>
@@ -166,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="384"/>
+            <point key="canvasLocation" x="1020" y="357"/>
         </scene>
         <!--Configuration View Controller-->
         <scene sceneID="bWr-ac-yEb">
