@@ -63,7 +63,7 @@
 		3DAC57AD1C0A30F200AA9CDD /* HangmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAC57B11C0A30F200AA9CDD /* HangmanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanTests.swift; sourceTree = "<group>"; };
 		3DAC57B31C0A30F200AA9CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DAC57BC1C0A3AC600AA9CDD /* small.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = small.plist; path = ../small.plist; sourceTree = "<group>"; };
+		3DAC57BC1C0A3AC600AA9CDD /* small.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = small.plist; sourceTree = "<group>"; };
 		3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessTests.swift; sourceTree = "<group>"; };
 		3DAC57C41C0A3DF500AA9CDD /* WordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 		3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineTests.swift; sourceTree = "<group>"; };
 		3DCC0BFB1C0F4AD90012B083 /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		3DCC0BFE1C10789C0012B083 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
-		3DCC0C021C10A8D20012B083 /* HighscoreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighscoreList.swift; path = ../HighscoreList.swift; sourceTree = "<group>"; };
-		3DCC0C041C10CF9A0012B083 /* HighscoreListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighscoreListTests.swift; path = ../Hangman/HighscoreListTests.swift; sourceTree = "<group>"; };
+		3DCC0C021C10A8D20012B083 /* HighscoreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreList.swift; sourceTree = "<group>"; };
+		3DCC0C041C10CF9A0012B083 /* HighscoreListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreListTests.swift; sourceTree = "<group>"; };
 		3DCC0C071C10E80E0012B083 /* HighscoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoresViewController.swift; sourceTree = "<group>"; };
 		3DCC0C0A1C10EB010012B083 /* Highscore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highscore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,16 +102,16 @@
 		3D4857D51C0DA87D00D1A0D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3DCC0C0A1C10EB010012B083 /* Highscore.swift */,
-				3DCC0C021C10A8D20012B083 /* HighscoreList.swift */,
+				3DAC57CA1C0A55A300AA9CDD /* Configuration.swift */,
 				3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */,
 				3DAC57CD1C0A5A8000AA9CDD /* EvilEngine.swift */,
-				3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */,
 				3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */,
+				3DCC0C0A1C10EB010012B083 /* Highscore.swift */,
+				3DCC0C021C10A8D20012B083 /* HighscoreList.swift */,
+				3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */,
 				3DAC57C41C0A3DF500AA9CDD /* WordList.swift */,
-				3DAC57CA1C0A55A300AA9CDD /* Configuration.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3DAC57901C0A30F200AA9CDD = {
@@ -137,13 +137,13 @@
 			children = (
 				3DCC0BFD1C1078770012B083 /* Controllers */,
 				3D4857D51C0DA87D00D1A0D4 /* Models */,
+				3DAC579C1C0A30F200AA9CDD /* AppDelegate.swift */,
+				3DAC57A31C0A30F200AA9CDD /* Assets.xcassets */,
+				3DAC57A81C0A30F200AA9CDD /* Info.plist */,
+				3DAC57A51C0A30F200AA9CDD /* LaunchScreen.storyboard */,
+				3DAC57A01C0A30F200AA9CDD /* Main.storyboard */,
 				3DAC57BC1C0A3AC600AA9CDD /* small.plist */,
 				3DAC57D01C0A89DF00AA9CDD /* words.plist */,
-				3DAC579C1C0A30F200AA9CDD /* AppDelegate.swift */,
-				3DAC57A01C0A30F200AA9CDD /* Main.storyboard */,
-				3DAC57A31C0A30F200AA9CDD /* Assets.xcassets */,
-				3DAC57A51C0A30F200AA9CDD /* LaunchScreen.storyboard */,
-				3DAC57A81C0A30F200AA9CDD /* Info.plist */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -151,12 +151,12 @@
 		3DAC57B01C0A30F200AA9CDD /* HangmanTests */ = {
 			isa = PBXGroup;
 			children = (
-				3DAC57B11C0A30F200AA9CDD /* HangmanTests.swift */,
-				3DAC57B31C0A30F200AA9CDD /* Info.plist */,
-				3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */,
-				3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */,
 				3DCC0BFB1C0F4AD90012B083 /* ConfigurationTests.swift */,
+				3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */,
+				3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */,
+				3DAC57B11C0A30F200AA9CDD /* HangmanTests.swift */,
 				3DCC0C041C10CF9A0012B083 /* HighscoreListTests.swift */,
+				3DAC57B31C0A30F200AA9CDD /* Info.plist */,
 			);
 			path = HangmanTests;
 			sourceTree = "<group>";
@@ -164,11 +164,11 @@
 		3DCC0BFD1C1078770012B083 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3DAC579E1C0A30F200AA9CDD /* GameViewController.swift */,
 				3DCC0BFE1C10789C0012B083 /* ConfigurationViewController.swift */,
+				3DAC579E1C0A30F200AA9CDD /* GameViewController.swift */,
 				3DCC0C071C10E80E0012B083 /* HighscoresViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +331,7 @@
 				3DAC57A11C0A30F200AA9CDD /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		3DAC57A51C0A30F200AA9CDD /* LaunchScreen.storyboard */ = {
@@ -339,6 +340,7 @@
 				3DAC57A61C0A30F200AA9CDD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
