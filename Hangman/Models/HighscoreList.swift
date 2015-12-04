@@ -19,7 +19,7 @@ class HighscoreList {
         var highscores = userDefaults.objectForKey(HighscoreList.userDefaultsKey)
 
         if highscores == nil {
-            userDefaults.setObject([[String: AnyObject]](), forKey: HighscoreList.userDefaultsKey)
+            saveHighscores([[String: AnyObject]]())
             highscores = userDefaults.objectForKey(HighscoreList.userDefaultsKey)
         }
 
