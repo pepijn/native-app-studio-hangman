@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var loserMessage: UILabel!
     @IBOutlet weak var highscoresTableView: UITableView!
 
-    let highscoresViewController = HighscoresViewController.init()
+    let highscoresViewController = HighscoresViewController()
 
     var engine: Engine? {
         didSet {
@@ -54,7 +54,7 @@ class GameViewController: UIViewController {
     }
 
     func updateStatus() {
-        status.text = engine!.description
+        status.text = engine!.controllerStatus
         remainingGuesses.text = String(engine!.incorrectGuessesRemaining)
 
         if !engine!.finishedGame {

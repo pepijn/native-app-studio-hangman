@@ -47,23 +47,36 @@ class Engine {
         }).joinWithSeparator("")
     }
 
-    var incorrectGuessesRemaining: Int {
-        return maxMistakes - incorrectlyGuessedLetters.count
+    var controllerStatus: String {
+        if lostGame {
+            return wordList.first!
+        }
+
+        return description
     }
 
-    var lostGame: Bool {
-        if incorrectlyGuessedLetters.count >= maxMistakes {
-            return true
-        }
-        return false
+    var incorrectGuessesRemaining: Int {
+        return maxMistakes - incorrectlyGuessedLetters.count
     }
 
     var wonGame: Bool {
         return status.filter { $0 == nil }.count == 0
     }
 
+    var lostGame: Bool {
+        if wonGame {
+            return false
+        }
+
+        if incorrectGuessesRemaining <= 0 {
+            return true
+        }
+
+        return false
+    }
+
     var finishedGame: Bool {
-        if lostGame || wonGame {
+        if wonGame || lostGame {
             return true
         }
         return false
