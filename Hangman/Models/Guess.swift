@@ -27,13 +27,23 @@ class Guess {
     }
 
     var equivalenceClasses: [String: Set<String>] {
-        return wordClasses.reduce([String: Set<String>]()) { (var collection, word) -> [String: Set<String>] in
-            if collection[word.equivalenceClass] == nil {
-                collection[word.equivalenceClass] = Set()
+        var swiftDict = [String: Set<String>]()
+        let collection = NSMutableDictionary(dictionary: swiftDict)
+
+        for (word, equivalenceClass) in wordClasses {
+            if collection.objectForKey(equivalenceClass) == nil {
+                collection.setObject(NSMutableSet(), forKey: equivalenceClass)
             }
-            collection[word.equivalenceClass]!.insert(word.word)
-            return collection
+            let set = collection.objectForKey(equivalenceClass) as! NSMutableSet
+            set.addObject(word)
+            collection.setObject(set, forKey: equivalenceClass)
         }
+
+        for (key, value) in collection {
+            swiftDict[key as! String] = value as? Set<String>
+        }
+
+        return swiftDict
     }
 
     var favoredEquivalenceClass: String {

@@ -49,7 +49,7 @@ class HighscoreList {
 
     func reset() {
         var tempHighscores = _highscores
-        tempHighscores.removeAll()
+        tempHighscores = []
         saveHighscores(tempHighscores)
     }
 
