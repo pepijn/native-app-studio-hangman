@@ -70,7 +70,7 @@ class GuessTests: XCTestCase {
     }
 
     func testInitWithLargeWordList() {
-        let wordList = WordList.longList.nLetterWords(5)
+        let wordList = WordList.sharedInstance.nLetterWords(5)
         let guess = Guess.init(letter: "e", wordList: wordList)
 
         self.measureBlock {
@@ -80,6 +80,7 @@ class GuessTests: XCTestCase {
             // + Swift dictionary:           0.21 sec
             // + UnicodeScalar => Character: 0.23 sec
             XCTAssertEqual(guess.favoredEquivalenceClass, "-----")
+            guess.remainingWordList
         }
     }
 }

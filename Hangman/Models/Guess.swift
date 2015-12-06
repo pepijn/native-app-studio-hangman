@@ -26,9 +26,9 @@ class Guess {
         }
     }
 
-    var equivalenceClasses: [String: Set<String>] {
-        var swiftDict = [String: Set<String>]()
-        let collection = NSMutableDictionary(dictionary: swiftDict)
+    private var _equivalenceClasses: NSMutableDictionary {
+        let type = [String: Set<String>]()
+        let collection = NSMutableDictionary(dictionary: type)
 
         for (word, equivalenceClass) in wordClasses {
             if collection.objectForKey(equivalenceClass) == nil {
@@ -38,16 +38,21 @@ class Guess {
             set.addObject(word)
             collection.setObject(set, forKey: equivalenceClass)
         }
-
-        for (key, value) in collection {
-            swiftDict[key as! String] = value as? Set<String>
-        }
-
-        return swiftDict
+        return collection
     }
 
-    var favoredEquivalenceClass: String {
-        let counts = equivalenceClasses.map { (
+    lazy var equivalenceClasses: [String: Set<String>] = {
+        var collection = [String: Set<String>]()
+
+        for (key, value) in self._equivalenceClasses {
+            collection[key as! String] = value as? Set<String>
+        }
+
+        return collection
+    }()
+
+    lazy var favoredEquivalenceClass: String = {
+        let counts = self.equivalenceClasses.map { (
             word: $0.0,
             classSize: $0.1.count,
             unknownCharacterCount: $0.0.characters.filter { $0 == Guess.unknownCharacter }.count)
@@ -59,7 +64,7 @@ class Guess {
                 return $0.unknownCharacterCount > $1.unknownCharacterCount
             }
         }.first!.0
-    }
+    }()
 
     var remainingWordList: Set<String> {
         return equivalenceClasses[favoredEquivalenceClass]!

@@ -18,8 +18,8 @@ class ConfigurationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        wordLengthStepper.minimumValue = Double(WordList.shortList.minimumWordLength)
-        wordLengthStepper.maximumValue = Double(WordList.shortList.maximumWordLength)
+        wordLengthStepper.minimumValue = Double(WordList.sharedInstance.minimumWordLength)
+        wordLengthStepper.maximumValue = Double(WordList.sharedInstance.maximumWordLength)
 
         incorrectGuessesStepper.minimumValue = 1.0
         incorrectGuessesStepper.maximumValue = Double(Configuration.maxMaxIncorrectGuesses)
