@@ -15,16 +15,16 @@ class Configuration {
 
     static let sharedInstance = Configuration()
 
-    var lengthOfWord = WordList.sharedInstance.wordList.first!.characters.count
+    var lengthOfWord = WordList.shortList.wordList.first!.characters.count
     var maxIncorrectGuesses = defaultMaxIncorrectGuesses
     var evilMode = defaultIsEvilMode
 
     var engine: Engine {
         if evilMode {
-            let words = WordList.sharedInstance.nLetterWords(lengthOfWord)
+            let words = WordList.shortList.nLetterWords(lengthOfWord)
             return EvilEngine.init(words: words, maxMistakes: maxIncorrectGuesses)
         } else {
-            return HonestEngine.init(word: WordList.sharedInstance.nLetterWord(lengthOfWord), maxMistakes: maxIncorrectGuesses)
+            return HonestEngine.init(word: WordList.shortList.nLetterWord(lengthOfWord), maxMistakes: maxIncorrectGuesses)
         }
     }
 }

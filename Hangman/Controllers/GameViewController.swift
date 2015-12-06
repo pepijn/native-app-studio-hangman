@@ -54,7 +54,7 @@ class GameViewController: UIViewController {
     }
 
     func updateStatus() {
-        status.text = engine!.controllerStatus
+        status.text = engine!.word
         remainingGuesses.text = String(engine!.incorrectGuessesRemaining)
 
         if !engine!.finishedGame {

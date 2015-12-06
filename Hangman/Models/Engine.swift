@@ -47,7 +47,7 @@ class Engine {
         }).joinWithSeparator("")
     }
 
-    var controllerStatus: String {
+    var word: String {
         if lostGame {
             return wordList.first!
         }

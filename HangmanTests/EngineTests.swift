@@ -52,7 +52,7 @@ class EngineTests: XCTestCase {
         XCTAssertFalse(engine.guessLetter("b"))
         XCTAssert(engine.lostGame)
         XCTAssert(engine.finishedGame)
-        XCTAssertEqual(engine.controllerStatus, "duck")
+        XCTAssertEqual(engine.word, "duck")
         XCTAssertEqual(engine.incorrectGuessesRemaining, 0)
         XCTAssertFalse(engine.wonGame)
         XCTAssertFalse(engine.guessLetter("d"))

@@ -68,4 +68,12 @@ class GuessTests: XCTestCase {
         guess = Guess.init(letter: "k", previousGuess: guess)
         XCTAssertEqual(guess.favoredEquivalenceClass, "duck")
     }
+
+    func testInitWithLargeWordList() {
+        let wordList = WordList.longList.nLetterWords(3)
+        let guess = Guess.init(letter: "r", wordList: wordList)
+        self.measureBlock {
+            guess.equivalenceClasses
+        }
+    }
 }

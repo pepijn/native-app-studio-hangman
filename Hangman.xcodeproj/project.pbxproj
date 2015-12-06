@@ -12,7 +12,6 @@
 		3DAC57A21C0A30F200AA9CDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57A01C0A30F200AA9CDD /* Main.storyboard */; };
 		3DAC57A41C0A30F200AA9CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57A31C0A30F200AA9CDD /* Assets.xcassets */; };
 		3DAC57A71C0A30F200AA9CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57A51C0A30F200AA9CDD /* LaunchScreen.storyboard */; };
-		3DAC57B21C0A30F200AA9CDD /* HangmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57B11C0A30F200AA9CDD /* HangmanTests.swift */; };
 		3DAC57BD1C0A3AC600AA9CDD /* small.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57BC1C0A3AC600AA9CDD /* small.plist */; };
 		3DAC57BE1C0A3AC600AA9CDD /* small.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57BC1C0A3AC600AA9CDD /* small.plist */; };
 		3DAC57C01C0A3AEA00AA9CDD /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */; };
@@ -61,7 +60,6 @@
 		3DAC57A61C0A30F200AA9CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DAC57A81C0A30F200AA9CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DAC57AD1C0A30F200AA9CDD /* HangmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DAC57B11C0A30F200AA9CDD /* HangmanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanTests.swift; sourceTree = "<group>"; };
 		3DAC57B31C0A30F200AA9CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DAC57BC1C0A3AC600AA9CDD /* small.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = small.plist; sourceTree = "<group>"; };
 		3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				3DCC0BFB1C0F4AD90012B083 /* ConfigurationTests.swift */,
 				3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */,
 				3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */,
-				3DAC57B11C0A30F200AA9CDD /* HangmanTests.swift */,
 				3DCC0C041C10CF9A0012B083 /* HighscoreListTests.swift */,
 				3DAC57B31C0A30F200AA9CDD /* Info.plist */,
 			);
@@ -301,7 +298,6 @@
 				3DAC57CF1C0A5A8000AA9CDD /* EvilEngine.swift in Sources */,
 				3DCC0C091C10E80E0012B083 /* HighscoresViewController.swift in Sources */,
 				3DAC57CC1C0A55A300AA9CDD /* Configuration.swift in Sources */,
-				3DAC57B21C0A30F200AA9CDD /* HangmanTests.swift in Sources */,
 				3DAC57C61C0A3DF500AA9CDD /* WordList.swift in Sources */,
 				3DCC0BFC1C0F4AD90012B083 /* ConfigurationTests.swift in Sources */,
 				3DAC57C31C0A3B5400AA9CDD /* GuessTests.swift in Sources */,

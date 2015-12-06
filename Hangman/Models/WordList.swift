@@ -9,15 +9,18 @@
 import Foundation
 
 class WordList {
-    static let sharedInstance = WordList()
+    static let longList = WordList(file: "words")
+    static let shortList = WordList(file: "small")
+
     let wordList: Set<String>
 
     let minimumWordLength: Int
 
     let maximumWordLength: Int
+    let cache = NSCache()
 
-    init() {
-        let path = NSBundle.mainBundle().pathForResource("small", ofType: "plist")!
+    private init(file: String) {
+        let path = NSBundle.mainBundle().pathForResource(file, ofType: "plist")!
         let words = NSArray(contentsOfFile: path) as! [String]
         self.wordList = Set(words.map({ (word) -> String in
             return word.lowercaseString
@@ -29,9 +32,15 @@ class WordList {
     }
 
     func nLetterWords(letters: Int) -> Set<String> {
-        return Set(wordList.filter({ (word) -> Bool in
-            return word.characters.count == letters
-        }))
+        let key = letters
+        var data = cache.objectForKey(key)
+        if data == nil {
+            data = Set(wordList.filter({ (word) -> Bool in
+                return word.characters.count == letters
+            }))
+            cache.setObject(data!, forKey: key)
+        }
+        return data as! Set<String>
     }
 
     func nLetterWord(letters: Int) -> String {
