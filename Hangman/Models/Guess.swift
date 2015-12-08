@@ -26,6 +26,8 @@ class Guess {
         }
     }
 
+    // NSMutableDictionary has better dictionary performance than Swift's
+    // See GuessTests testLargeWordList() for details
     private var _equivalenceClasses: NSMutableDictionary {
         let type = [String: Set<String>]()
         let collection = NSMutableDictionary(dictionary: type)

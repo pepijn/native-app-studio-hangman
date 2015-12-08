@@ -22,7 +22,7 @@ class ConfigurationTests: XCTestCase {
 
     func testDefaults() {
         let configuration = Configuration()
-        XCTAssertEqual(configuration.lengthOfWord, 4)
+        XCTAssertEqual(configuration.lengthOfWord, 8)
         XCTAssertEqual(configuration.maxIncorrectGuesses, 10)
         XCTAssertEqual(configuration.evilMode, true)
         XCTAssertEqual(String(configuration.engine.dynamicType), "EvilEngine")

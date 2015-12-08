@@ -10,7 +10,6 @@ import Foundation
 
 class WordList {
     static let sharedInstance = WordList(file: "words")
-    static let shortList = WordList(file: "small")
 
     let wordList: Set<String>
 

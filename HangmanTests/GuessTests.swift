@@ -69,7 +69,7 @@ class GuessTests: XCTestCase {
         XCTAssertEqual(guess.favoredEquivalenceClass, "duck")
     }
 
-    func testInitWithLargeWordList() {
+    func testLargeWordList() {
         let wordList = WordList.sharedInstance.nLetterWords(5)
         let guess = Guess.init(letter: "e", wordList: wordList)
 
