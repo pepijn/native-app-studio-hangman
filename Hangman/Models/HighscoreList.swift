@@ -48,12 +48,10 @@ class HighscoreList {
     }
 
     func reset() {
-        var tempHighscores = _highscores
-        tempHighscores = []
-        saveHighscores(tempHighscores)
+        saveHighscores(nil)
     }
 
-    func saveHighscores(highscores: [[String: AnyObject]]) {
+    func saveHighscores(highscores: [[String: AnyObject]]?) {
         NSUserDefaults.standardUserDefaults().setObject(highscores, forKey: HighscoreList.userDefaultsKey)
     }
 }
