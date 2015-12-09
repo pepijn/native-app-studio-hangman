@@ -12,8 +12,6 @@
 		3DAC57A21C0A30F200AA9CDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57A01C0A30F200AA9CDD /* Main.storyboard */; };
 		3DAC57A41C0A30F200AA9CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57A31C0A30F200AA9CDD /* Assets.xcassets */; };
 		3DAC57A71C0A30F200AA9CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57A51C0A30F200AA9CDD /* LaunchScreen.storyboard */; };
-		3DAC57BD1C0A3AC600AA9CDD /* small.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57BC1C0A3AC600AA9CDD /* small.plist */; };
-		3DAC57BE1C0A3AC600AA9CDD /* small.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57BC1C0A3AC600AA9CDD /* small.plist */; };
 		3DAC57C01C0A3AEA00AA9CDD /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */; };
 		3DAC57C11C0A3AEA00AA9CDD /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */; };
 		3DAC57C31C0A3B5400AA9CDD /* GuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */; };
@@ -61,7 +59,6 @@
 		3DAC57A81C0A30F200AA9CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DAC57AD1C0A30F200AA9CDD /* HangmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAC57B31C0A30F200AA9CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DAC57BC1C0A3AC600AA9CDD /* small.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = small.plist; sourceTree = "<group>"; };
 		3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessTests.swift; sourceTree = "<group>"; };
 		3DAC57C41C0A3DF500AA9CDD /* WordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
@@ -140,7 +137,6 @@
 				3DAC57A81C0A30F200AA9CDD /* Info.plist */,
 				3DAC57A51C0A30F200AA9CDD /* LaunchScreen.storyboard */,
 				3DAC57A01C0A30F200AA9CDD /* Main.storyboard */,
-				3DAC57BC1C0A3AC600AA9CDD /* small.plist */,
 				3DAC57D01C0A89DF00AA9CDD /* words.plist */,
 			);
 			path = Hangman;
@@ -253,7 +249,6 @@
 			files = (
 				3DAC57A71C0A30F200AA9CDD /* LaunchScreen.storyboard in Resources */,
 				3DAC57A41C0A30F200AA9CDD /* Assets.xcassets in Resources */,
-				3DAC57BD1C0A3AC600AA9CDD /* small.plist in Resources */,
 				3DAC57A21C0A30F200AA9CDD /* Main.storyboard in Resources */,
 				3DAC57D11C0A89DF00AA9CDD /* words.plist in Resources */,
 			);
@@ -264,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DAC57D21C0A89DF00AA9CDD /* words.plist in Resources */,
-				3DAC57BE1C0A3AC600AA9CDD /* small.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
