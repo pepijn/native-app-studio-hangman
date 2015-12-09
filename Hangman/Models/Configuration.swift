@@ -79,6 +79,9 @@ class Configuration {
         }
     }
 
+    private init() {
+    }
+
     private func getConfig(key: AnyObject?, defaultValue: AnyObject) -> AnyObject {
         if let value = key {
             return value

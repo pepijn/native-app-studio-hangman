@@ -38,6 +38,9 @@ class HighscoreList {
         return list.sort { $0.0.mistakes < $0.1.mistakes }
     }
 
+    private init() {
+    }
+
     func submitHighscore(word: String, mistakes: Int) {
         var tempHighscores = _highscores
         var entry = [String: AnyObject]()
