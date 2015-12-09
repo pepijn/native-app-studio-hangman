@@ -82,7 +82,7 @@ class Engine {
         return false
     }
 
-    internal init(wordList: Set<String>, maxMistakes: Int) {
+    init(wordList: Set<String>, maxMistakes: Int) {
         self.wordList = wordList
         self.maxMistakes = maxMistakes
         self.status = [Character?](count: wordList.first!.characters.count, repeatedValue: nil)
