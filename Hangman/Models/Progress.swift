@@ -11,17 +11,22 @@ import Foundation
 struct ProgressSlot {
     let character: Character
     let filled: Bool
+    let next: Bool
 
     var description: String {
         if filled {
             return String(character).uppercaseString
         }
+        if next {
+            return "\(String(character))_"
+        }
         return String(character)
     }
 
-    init(character: Character, filled: Bool) {
+    init(character: Character, filled: Bool, next: Bool) {
         self.character = character
         self.filled = filled
+        self.next = next
     }
 }
 
@@ -45,20 +50,24 @@ class Progress {
     }
 
     private var base: String {
-        var string = "hangma"
-        string.appendContentsOf(String(extraAs))
-        string.appendContentsOf("n")
-        return string
+        return "hangma\(String(extraAs))n"
+    }
+
+    private var partSize: Int {
+        return base.characters.count / total
     }
 
     private var splitIndex: Int {
-        let partSize = base.characters.count / total
         return partSize * mistakes
     }
 
-    private var progressSlots: [ProgressSlot] {
+    private var nextSplitIndex: Int {
+        return partSize * (mistakes + 1)
+    }
+
+    var progressSlots: [ProgressSlot] {
         return base.characters.enumerate().map({ (index, character) -> ProgressSlot in
-            ProgressSlot(character: character, filled: index < splitIndex)
+            ProgressSlot(character: character, filled: index < splitIndex, next: index < nextSplitIndex)
         })
     }
 

@@ -17,11 +17,11 @@ class ProgressTests: XCTestCase {
 
         progress = Progress(mistakes: 1, remaining: 1)
         XCTAssertEqual(progress.extraACount, 1)
-        XCTAssertEqual(progress.description, "HANGmaan")
+        XCTAssertEqual(progress.description, "HANGm_a_a_n_")
 
         progress = Progress(mistakes: 2, remaining: 1)
         XCTAssertEqual(progress.extraACount, 2)
-        XCTAssertEqual(progress.description, "HANGMAaan")
+        XCTAssertEqual(progress.description, "HANGMAa_a_n_")
 
         progress = Progress(mistakes: 0, remaining: 4)
         XCTAssertEqual(progress.extraACount, 1)
@@ -41,7 +41,7 @@ class ProgressTests: XCTestCase {
 
         progress = Progress(mistakes: 7, remaining: 2)
         XCTAssertEqual(progress.extraACount, 2)
-        XCTAssertEqual(progress.description, "HANGMAAan")
+        XCTAssertEqual(progress.description, "HANGMAAa_n")
 
         progress = Progress(mistakes: 7, remaining: 0)
         XCTAssertEqual(progress.description, "HANGMAN")

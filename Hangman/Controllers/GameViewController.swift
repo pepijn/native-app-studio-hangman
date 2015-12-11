@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var progressCollectionView: UICollectionView!
 
     let highscoresViewController = HighscoresViewController()
-    let progressViewController = ProgressViewController()
+    var progressViewController = ProgressViewController()
 
     var engine: Engine? {
         didSet {
@@ -28,7 +28,6 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         highscoresTableView.delegate = highscoresViewController
         highscoresTableView.dataSource = highscoresViewController
@@ -60,8 +59,9 @@ class GameViewController: UIViewController {
 
     func updateStatus() {
         status.text = engine!.word
-        let progress = Progress(mistakes: engine!.incorrectlyGuessedLetters.count, remaining: engine!.incorrectGuessesRemaining)
-        remainingGuesses.text = progress.description
+
+        progressViewController.progress = Progress(mistakes: engine!.incorrectlyGuessedLetters.count, remaining: engine!.incorrectGuessesRemaining)
+        progressCollectionView.reloadData()
 
         if !engine!.finishedGame {
             return
