@@ -11,15 +11,6 @@ import XCTest
 class EngineTests: XCTestCase {
     let wordList = Set(["bear", "boar", "deer", "duck", "hare"])
 
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-
     func testCompletion() {
         let engine = EvilEngine.init(words: wordList, maxMistakes: 3)
         XCTAssertEqual(engine.description, "----")
