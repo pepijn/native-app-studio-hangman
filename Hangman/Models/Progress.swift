@@ -33,8 +33,9 @@ struct ProgressSlot {
 class Progress {
     let mistakes: Int
     let remaining: Int
+    let wonGame: Bool
 
-    private var total: Int {
+    var total: Int {
         return mistakes + remaining
     }
 
@@ -75,8 +76,17 @@ class Progress {
         return progressSlots.map { $0.description }.joinWithSeparator("")
     }
 
-    init(mistakes: Int, remaining: Int) {
+    convenience init(engine: Engine) {
+        self.init(
+            mistakes: engine.incorrectlyGuessedLetters.count,
+            remaining: engine.incorrectGuessesRemaining,
+            wonGame: engine.wonGame
+        )
+    }
+
+    init(mistakes: Int, remaining: Int, wonGame: Bool) {
         self.mistakes = mistakes
         self.remaining = remaining
+        self.wonGame = wonGame
     }
 }

@@ -15,7 +15,7 @@ class Configuration {
     static private let evilModeKey = "evilMode"
 
     static let maxMaxIncorrectGuesses = 26
-    static private let defaultMaxIncorrectGuesses = 10
+    static private let defaultMaxIncorrectGuesses = 7
     static private let defaultIsEvilMode = true
 
     static let sharedInstance = Configuration()

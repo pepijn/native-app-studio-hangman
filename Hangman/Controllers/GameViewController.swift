@@ -60,7 +60,7 @@ class GameViewController: UIViewController {
     func updateStatus() {
         status.text = engine!.word
 
-        progressViewController.progress = Progress(mistakes: engine!.incorrectlyGuessedLetters.count, remaining: engine!.incorrectGuessesRemaining)
+        progressViewController.progress = Progress(engine: engine!)
         progressCollectionView.reloadData()
 
         if !engine!.finishedGame {
