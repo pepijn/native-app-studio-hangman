@@ -15,8 +15,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var winnerMessage: UILabel!
     @IBOutlet weak var loserMessage: UILabel!
     @IBOutlet weak var highscoresTableView: UITableView!
+    @IBOutlet weak var progressCollectionView: UICollectionView!
 
     let highscoresViewController = HighscoresViewController()
+    let progressViewController = ProgressViewController()
 
     var engine: Engine? {
         didSet {
@@ -30,6 +32,9 @@ class GameViewController: UIViewController {
 
         highscoresTableView.delegate = highscoresViewController
         highscoresTableView.dataSource = highscoresViewController
+
+        progressCollectionView.delegate = progressViewController
+        progressCollectionView.dataSource = progressViewController
 
         restartGame(nil)
     }

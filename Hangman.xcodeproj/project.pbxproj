@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D71159C1C1A33D200C5D6F0 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71159B1C1A33D200C5D6F0 /* Status.swift */; };
+		3D71159E1C1A33E200C5D6F0 /* StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71159D1C1A33E200C5D6F0 /* StatusTests.swift */; };
+		3D7115A01C1A34BE00C5D6F0 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71159F1C1A34BE00C5D6F0 /* Slot.swift */; };
+		3D7115A21C1A36F700C5D6F0 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7115A11C1A36F700C5D6F0 /* Progress.swift */; };
+		3D7115A31C1A36F700C5D6F0 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7115A11C1A36F700C5D6F0 /* Progress.swift */; };
+		3D7115A51C1A372E00C5D6F0 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7115A41C1A372E00C5D6F0 /* ProgressViewController.swift */; };
+		3D7115A61C1A372E00C5D6F0 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7115A41C1A372E00C5D6F0 /* ProgressViewController.swift */; };
+		3D7115AC1C1AC59E00C5D6F0 /* ProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7115AB1C1AC59E00C5D6F0 /* ProgressViewCell.swift */; };
+		3D7115AD1C1AC59E00C5D6F0 /* ProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7115AB1C1AC59E00C5D6F0 /* ProgressViewCell.swift */; };
+		3D7115AF1C1AC69F00C5D6F0 /* ProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7115AE1C1AC69F00C5D6F0 /* ProgressTests.swift */; };
 		3DAC579D1C0A30F200AA9CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC579C1C0A30F200AA9CDD /* AppDelegate.swift */; };
 		3DAC579F1C0A30F200AA9CDD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC579E1C0A30F200AA9CDD /* GameViewController.swift */; };
 		3DAC57A21C0A30F200AA9CDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57A01C0A30F200AA9CDD /* Main.storyboard */; };
@@ -14,7 +24,6 @@
 		3DAC57A71C0A30F200AA9CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57A51C0A30F200AA9CDD /* LaunchScreen.storyboard */; };
 		3DAC57C01C0A3AEA00AA9CDD /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */; };
 		3DAC57C11C0A3AEA00AA9CDD /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */; };
-		3DAC57C31C0A3B5400AA9CDD /* GuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */; };
 		3DAC57C51C0A3DF500AA9CDD /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57C41C0A3DF500AA9CDD /* WordList.swift */; };
 		3DAC57C61C0A3DF500AA9CDD /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57C41C0A3DF500AA9CDD /* WordList.swift */; };
 		3DAC57C81C0A460300AA9CDD /* HonestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */; };
@@ -27,11 +36,8 @@
 		3DAC57D21C0A89DF00AA9CDD /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC57D01C0A89DF00AA9CDD /* words.plist */; };
 		3DAC57D41C0B8C2F00AA9CDD /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */; };
 		3DAC57D51C0B8C2F00AA9CDD /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */; };
-		3DAC57D71C0C5A6000AA9CDD /* EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */; };
-		3DCC0BFC1C0F4AD90012B083 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0BFB1C0F4AD90012B083 /* ConfigurationTests.swift */; };
 		3DCC0BFF1C10789C0012B083 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0BFE1C10789C0012B083 /* ConfigurationViewController.swift */; };
 		3DCC0C031C10A8D20012B083 /* HighscoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0C021C10A8D20012B083 /* HighscoreList.swift */; };
-		3DCC0C051C10CF9A0012B083 /* HighscoreListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0C041C10CF9A0012B083 /* HighscoreListTests.swift */; };
 		3DCC0C061C10D0930012B083 /* HighscoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0C021C10A8D20012B083 /* HighscoreList.swift */; };
 		3DCC0C081C10E80E0012B083 /* HighscoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0C071C10E80E0012B083 /* HighscoresViewController.swift */; };
 		3DCC0C091C10E80E0012B083 /* HighscoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0C071C10E80E0012B083 /* HighscoresViewController.swift */; };
@@ -50,6 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D71159B1C1A33D200C5D6F0 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		3D71159D1C1A33E200C5D6F0 /* StatusTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTests.swift; sourceTree = "<group>"; };
+		3D71159F1C1A34BE00C5D6F0 /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
+		3D7115A11C1A36F700C5D6F0 /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		3D7115A41C1A372E00C5D6F0 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		3D7115AB1C1AC59E00C5D6F0 /* ProgressViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewCell.swift; sourceTree = "<group>"; };
+		3D7115AE1C1AC69F00C5D6F0 /* ProgressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressTests.swift; sourceTree = "<group>"; };
 		3DAC57991C0A30F200AA9CDD /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAC579C1C0A30F200AA9CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DAC579E1C0A30F200AA9CDD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +110,7 @@
 		3D4857D51C0DA87D00D1A0D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3D7115A11C1A36F700C5D6F0 /* Progress.swift */,
 				3DAC57CA1C0A55A300AA9CDD /* Configuration.swift */,
 				3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */,
 				3DAC57CD1C0A5A8000AA9CDD /* EvilEngine.swift */,
@@ -105,8 +119,18 @@
 				3DCC0C021C10A8D20012B083 /* HighscoreList.swift */,
 				3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */,
 				3DAC57C41C0A3DF500AA9CDD /* WordList.swift */,
+				3D71159B1C1A33D200C5D6F0 /* Status.swift */,
+				3D71159F1C1A34BE00C5D6F0 /* Slot.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3D7115AA1C1AC57B00C5D6F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D7115AB1C1AC59E00C5D6F0 /* ProgressViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		3DAC57901C0A30F200AA9CDD = {
@@ -130,6 +154,7 @@
 		3DAC579B1C0A30F200AA9CDD /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
+				3D7115AA1C1AC57B00C5D6F0 /* Views */,
 				3DCC0BFD1C1078770012B083 /* Controllers */,
 				3D4857D51C0DA87D00D1A0D4 /* Models */,
 				3DAC579C1C0A30F200AA9CDD /* AppDelegate.swift */,
@@ -145,11 +170,13 @@
 		3DAC57B01C0A30F200AA9CDD /* HangmanTests */ = {
 			isa = PBXGroup;
 			children = (
+				3D7115AE1C1AC69F00C5D6F0 /* ProgressTests.swift */,
 				3DCC0BFB1C0F4AD90012B083 /* ConfigurationTests.swift */,
 				3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */,
 				3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */,
 				3DCC0C041C10CF9A0012B083 /* HighscoreListTests.swift */,
 				3DAC57B31C0A30F200AA9CDD /* Info.plist */,
+				3D71159D1C1A33E200C5D6F0 /* StatusTests.swift */,
 			);
 			path = HangmanTests;
 			sourceTree = "<group>";
@@ -160,6 +187,7 @@
 				3DCC0BFE1C10789C0012B083 /* ConfigurationViewController.swift */,
 				3DAC579E1C0A30F200AA9CDD /* GameViewController.swift */,
 				3DCC0C071C10E80E0012B083 /* HighscoresViewController.swift */,
+				3D7115A41C1A372E00C5D6F0 /* ProgressViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,11 +303,16 @@
 				3DAC57CB1C0A55A300AA9CDD /* Configuration.swift in Sources */,
 				3DAC579F1C0A30F200AA9CDD /* GameViewController.swift in Sources */,
 				3DAC57C51C0A3DF500AA9CDD /* WordList.swift in Sources */,
+				3D7115A51C1A372E00C5D6F0 /* ProgressViewController.swift in Sources */,
 				3DAC57C01C0A3AEA00AA9CDD /* Engine.swift in Sources */,
 				3DCC0C081C10E80E0012B083 /* HighscoresViewController.swift in Sources */,
+				3D71159C1C1A33D200C5D6F0 /* Status.swift in Sources */,
 				3DCC0BFF1C10789C0012B083 /* ConfigurationViewController.swift in Sources */,
 				3DAC57D41C0B8C2F00AA9CDD /* Guess.swift in Sources */,
 				3DAC57C81C0A460300AA9CDD /* HonestEngine.swift in Sources */,
+				3D7115A01C1A34BE00C5D6F0 /* Slot.swift in Sources */,
+				3D7115AC1C1AC59E00C5D6F0 /* ProgressViewCell.swift in Sources */,
+				3D7115A21C1A36F700C5D6F0 /* Progress.swift in Sources */,
 				3DAC579D1C0A30F200AA9CDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,17 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DCC0C051C10CF9A0012B083 /* HighscoreListTests.swift in Sources */,
 				3DAC57CF1C0A5A8000AA9CDD /* EvilEngine.swift in Sources */,
 				3DCC0C091C10E80E0012B083 /* HighscoresViewController.swift in Sources */,
 				3DAC57CC1C0A55A300AA9CDD /* Configuration.swift in Sources */,
 				3DAC57C61C0A3DF500AA9CDD /* WordList.swift in Sources */,
-				3DCC0BFC1C0F4AD90012B083 /* ConfigurationTests.swift in Sources */,
-				3DAC57C31C0A3B5400AA9CDD /* GuessTests.swift in Sources */,
-				3DAC57D71C0C5A6000AA9CDD /* EngineTests.swift in Sources */,
+				3D7115A31C1A36F700C5D6F0 /* Progress.swift in Sources */,
 				3DAC57D51C0B8C2F00AA9CDD /* Guess.swift in Sources */,
 				3DAC57C91C0A460300AA9CDD /* HonestEngine.swift in Sources */,
+				3D7115A61C1A372E00C5D6F0 /* ProgressViewController.swift in Sources */,
+				3D7115AF1C1AC69F00C5D6F0 /* ProgressTests.swift in Sources */,
 				3DCC0C061C10D0930012B083 /* HighscoreList.swift in Sources */,
+				3D71159E1C1A33E200C5D6F0 /* StatusTests.swift in Sources */,
+				3D7115AD1C1AC59E00C5D6F0 /* ProgressViewCell.swift in Sources */,
 				3DCC0C0C1C10EB010012B083 /* Highscore.swift in Sources */,
 				3DAC57C11C0A3AEA00AA9CDD /* Engine.swift in Sources */,
 			);
@@ -361,7 +395,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -423,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Hangman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.epij.p.Hangman;
