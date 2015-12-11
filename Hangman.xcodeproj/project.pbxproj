@@ -115,10 +115,10 @@
 				3DAC57D31C0B8C2F00AA9CDD /* Guess.swift */,
 				3DCC0C0A1C10EB010012B083 /* Highscore.swift */,
 				3DCC0C021C10A8D20012B083 /* HighscoreList.swift */,
-				3D7115B01C1B74EE00C5D6F0 /* Progress.swift */,
 				3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */,
-				3DAC57C41C0A3DF500AA9CDD /* WordList.swift */,
+				3D7115B01C1B74EE00C5D6F0 /* Progress.swift */,
 				3D7115B31C1B75FE00C5D6F0 /* ProgressSlot.swift */,
+				3DAC57C41C0A3DF500AA9CDD /* WordList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
