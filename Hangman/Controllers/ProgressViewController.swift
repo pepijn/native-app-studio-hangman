@@ -12,7 +12,7 @@ class ProgressViewController: UIViewController, UICollectionViewDataSource, UICo
     var progress: Progress?
 
     var color: UIColor {
-        if progress!.wonGame {
+        if progress!.wonGame! {
             return UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
         }
 
