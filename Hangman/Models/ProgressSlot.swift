@@ -8,6 +8,7 @@
 
 import Foundation
 
+// The ProgressSlot represents one of the H A N G M A [A...] N letters.
 struct ProgressSlot {
     let character: Character
     let filled: Bool

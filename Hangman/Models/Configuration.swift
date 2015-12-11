@@ -8,6 +8,7 @@
 
 import Foundation
 
+// The Configuration class retrieves and persists configuration data.
 class Configuration {
     static private let configurationKey = "configuration"
     static private let lengthOfWordKey = "lengthOfWord"

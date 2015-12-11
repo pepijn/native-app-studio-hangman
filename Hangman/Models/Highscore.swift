@@ -8,6 +8,7 @@
 
 import Foundation
 
+// An instance of the Highscore class represents an entry in the highscore list
 class Highscore {
     let word: String
     let mistakes: Int

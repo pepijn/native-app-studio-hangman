@@ -8,6 +8,7 @@
 
 import Foundation
 
+// The HighscoreList class reads and persists the highscores.
 class HighscoreList {
     static private let userDefaultsKey = "highscores"
     static private let wordKey = "word"

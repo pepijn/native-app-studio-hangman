@@ -8,6 +8,7 @@
 
 import Foundation
 
+// The WordList singleton supplies word(s) to the engine.
 class WordList {
     static let sharedInstance = WordList(file: "words")
 

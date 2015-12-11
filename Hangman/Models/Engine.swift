@@ -8,6 +8,8 @@
 
 import Foundation
 
+// The Engine class is the manager of the gameplay state. It also takes care of
+// initialization of Guess instances.
 class Engine {
     static private let alphabet = "abcdefghijklmnopqrstuvwxyz"
     static private var allLetters: Set<Character> {
@@ -15,7 +17,7 @@ class Engine {
     }
 
     private var wordList: Set<String>
-    var status: [Character?]
+    private var status: [Character?]
     let maxMistakes: Int
 
     // Use an array to keep chronological history of guesses

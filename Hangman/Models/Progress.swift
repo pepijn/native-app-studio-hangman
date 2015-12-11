@@ -8,6 +8,8 @@
 
 import Foundation
 
+// The Progress class takes care of the letters that show the state of the game
+// to the user in a graphical way.
 class Progress {
     let mistakes: Int
     let remaining: Int
@@ -17,6 +19,8 @@ class Progress {
         return mistakes + remaining
     }
 
+    // This method uses a mathematical formula to determine the amount of extra
+    // As that have to be added in hangma<here>n.
     var extraACount: Int {
         let y = Int(floor(Float(total) / 4))
         let z = min(Int(floor(Float(total) / 7)), 1)
