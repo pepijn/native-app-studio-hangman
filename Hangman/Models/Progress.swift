@@ -29,13 +29,14 @@ class Progress {
     let mistakes: Int
     let remaining: Int
 
-    var total: Int {
+    private var total: Int {
         return mistakes + remaining
     }
 
     var extraACount: Int {
         let y = Int(floor(Float(total) / 4))
-        let z = Int(floor(Float(total) / 7))
+        let z = min(Int(floor(Float(total) / 7)), 1)
+
         return ((((total % 4) + y) + y - 1) * (y + 1) - y) * (1 - z) + z * (total - 7)
     }
 
@@ -50,12 +51,12 @@ class Progress {
         return string
     }
 
-    var splitIndex: Int {
+    private var splitIndex: Int {
         let partSize = base.characters.count / total
         return partSize * mistakes
     }
 
-    var progressSlots: [ProgressSlot] {
+    private var progressSlots: [ProgressSlot] {
         return base.characters.enumerate().map({ (index, character) -> ProgressSlot in
             ProgressSlot(character: character, filled: index < splitIndex)
         })

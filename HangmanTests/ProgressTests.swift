@@ -45,5 +45,8 @@ class ProgressTests: XCTestCase {
 
         progress = Progress(mistakes: 7, remaining: 0)
         XCTAssertEqual(progress.description, "HANGMAN")
+
+        progress = Progress(mistakes: 0, remaining: 24)
+        XCTAssertEqual(progress.extraACount, 17)
     }
 }
