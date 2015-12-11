@@ -69,6 +69,6 @@ The models have been built by using a test-driven development workflow. Please c
 
 #### Pièce de résistance
 
-The display of the game state deserves some explanation. The amount of `A`s on the screen is dependent on the amount of maximum incorrect guesses. The (non-)transparency of letters is controlled by the amount of incorrectly guessed letters so far. The tests for the mathematics behind this can be seen in `HangmanTests/ProgressTests.swift`. They are based on the following page in my notebook:
+The display of the game state deserves some explanation. The amount of `A`s on the screen is dependent on the amount of maximum incorrect guesses. The (non-)transparency and color of letters is controlled by the amount of incorrectly guessed letters so far. The tests for the mathematics behind this can be seen in `HangmanTests/ProgressTests.swift`. They are based on the following page in my notebook:
 
 ![](Media/hangman_letters.jpg)
