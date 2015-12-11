@@ -39,9 +39,25 @@ class Progress {
         return ((((total % 4) + y) + y - 1) * (y + 1) - y) * (1 - z) + z * (total - 7)
     }
 
+    private var extraAs: [Character] {
+        return [Character](count: extraACount, repeatedValue: Character("a"))
+    }
+
+    private var base: String {
+        var string = "hangma"
+        string.appendContentsOf(String(extraAs))
+        string.appendContentsOf("n")
+        return string
+    }
+
+    var splitIndex: Int {
+        let partSize = base.characters.count / total
+        return partSize * mistakes
+    }
+
     var progressSlots: [ProgressSlot] {
-        return "hangman".characters.enumerate().map({ (index, character) -> ProgressSlot in
-            ProgressSlot(character: character, filled: index < mistakes)
+        return base.characters.enumerate().map({ (index, character) -> ProgressSlot in
+            ProgressSlot(character: character, filled: index < splitIndex)
         })
     }
 
