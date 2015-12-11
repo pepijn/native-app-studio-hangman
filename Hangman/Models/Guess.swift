@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Every guessed letter is represented by an instance of the Guess class.
 class Guess {
     static private let unknownCharacter = Character("-")
     private let guessedLetter: Character
