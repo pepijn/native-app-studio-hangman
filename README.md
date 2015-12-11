@@ -35,6 +35,7 @@ Your app’s front side must have a title (e.g., Hangman) or logo as well as nav
 ### Prototype design
 
 #### Application flow
+
 ![Application flow](Media/ui_flow.jpg)
 
 #### Models
@@ -46,3 +47,18 @@ Your app’s front side must have a title (e.g., Hangman) or logo as well as nav
 ##### APIs
 
 - NSUserDefaults
+
+### Implementation
+
+The final implementation differs quite a lot from the design. The implementation has been built by using a test-driven development workflow. Please check out the tests (`HangmanTests/*.swift`) to get a better understanding of the code. The models have been built inside out; the chronological order of implementation is as follows:
+
+1. `Guess`
+2. `Engine`
+3. `EvilEngine`
+4. `HonestEngine`
+5. `WordList`
+6. `Configuration`
+7. `HighscoreList`
+8. `Highscore`
+9. `Progress`
+10. `ProgressSlot`
