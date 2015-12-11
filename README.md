@@ -3,6 +3,8 @@ Hangmaaan
 
 A highly configurable, minimalist and possibly evil Hangman implement.
 
+![](Media/playing.png)
+
 ## Features
 
 - [x] Play Hangman on your iPhone
@@ -28,15 +30,19 @@ Your app’s front side must have a title (e.g., Hangman) or logo as well as nav
 - [x] When settings are changed, they should only take effect for new games, not one already in progress, if any.
 - [x] Your app must maintain a history of high scores that’s displayed anytime a game is won or lost. We leave the definition of “high scores” to you, but you should somehow rank the results of at least 10 games (assuming at least 10 games have been won), displaying for each the word guessed and the number of mistakes made (which is presumably low). The history of high scores should persist even when your app is backgrounded or force-quit.
 
-## Application flow
-![Application flow](ui_flow.jpg)
+## Report
 
-## Models
+### Prototype design
 
-![Models](models.jpeg)
+#### Application flow
+![Application flow](Media/ui_flow.jpg)
 
-## Requirements
+#### Models
 
-### APIs
+![Models](Media/models.jpeg)
+
+#### Requirements
+
+##### APIs
 
 - NSUserDefaults
