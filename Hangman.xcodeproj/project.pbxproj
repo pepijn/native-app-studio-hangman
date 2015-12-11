@@ -110,7 +110,6 @@
 		3D4857D51C0DA87D00D1A0D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3D7115A11C1A36F700C5D6F0 /* Progress.swift */,
 				3DAC57CA1C0A55A300AA9CDD /* Configuration.swift */,
 				3DAC57BF1C0A3AEA00AA9CDD /* Engine.swift */,
 				3DAC57CD1C0A5A8000AA9CDD /* EvilEngine.swift */,
@@ -118,9 +117,10 @@
 				3DCC0C0A1C10EB010012B083 /* Highscore.swift */,
 				3DCC0C021C10A8D20012B083 /* HighscoreList.swift */,
 				3DAC57C71C0A460300AA9CDD /* HonestEngine.swift */,
-				3DAC57C41C0A3DF500AA9CDD /* WordList.swift */,
-				3D71159B1C1A33D200C5D6F0 /* Status.swift */,
+				3D7115A11C1A36F700C5D6F0 /* Progress.swift */,
 				3D71159F1C1A34BE00C5D6F0 /* Slot.swift */,
+				3D71159B1C1A33D200C5D6F0 /* Status.swift */,
+				3DAC57C41C0A3DF500AA9CDD /* WordList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			children = (
 				3D7115AB1C1AC59E00C5D6F0 /* ProgressViewCell.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3DAC57901C0A30F200AA9CDD = {
@@ -154,9 +154,9 @@
 		3DAC579B1C0A30F200AA9CDD /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
-				3D7115AA1C1AC57B00C5D6F0 /* Views */,
 				3DCC0BFD1C1078770012B083 /* Controllers */,
 				3D4857D51C0DA87D00D1A0D4 /* Models */,
+				3D7115AA1C1AC57B00C5D6F0 /* Views */,
 				3DAC579C1C0A30F200AA9CDD /* AppDelegate.swift */,
 				3DAC57A31C0A30F200AA9CDD /* Assets.xcassets */,
 				3DAC57A81C0A30F200AA9CDD /* Info.plist */,
@@ -170,12 +170,12 @@
 		3DAC57B01C0A30F200AA9CDD /* HangmanTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D7115AE1C1AC69F00C5D6F0 /* ProgressTests.swift */,
 				3DCC0BFB1C0F4AD90012B083 /* ConfigurationTests.swift */,
 				3DAC57D61C0C5A6000AA9CDD /* EngineTests.swift */,
 				3DAC57C21C0A3B5400AA9CDD /* GuessTests.swift */,
 				3DCC0C041C10CF9A0012B083 /* HighscoreListTests.swift */,
 				3DAC57B31C0A30F200AA9CDD /* Info.plist */,
+				3D7115AE1C1AC69F00C5D6F0 /* ProgressTests.swift */,
 				3D71159D1C1A33E200C5D6F0 /* StatusTests.swift */,
 			);
 			path = HangmanTests;
