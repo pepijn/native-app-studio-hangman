@@ -54,7 +54,7 @@ The final implementation differs quite a lot from the design.
 
 #### Models
 
-The models have been built by using a test-driven development workflow. Please check out the tests (`HangmanTests/*.swift`) to get a better understanding of the code. The chronological order of implementation is as follows:
+The models have been built by using a test-driven development workflow. Please check out the tests (`HangmanTests/*.swift`) to get a better understanding of the code. The ascending chronological order of implementation is as follows:
 
 1. `Guess`
 2. `Engine`
