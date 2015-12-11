@@ -50,7 +50,11 @@ Your app’s front side must have a title (e.g., Hangman) or logo as well as nav
 
 ### Implementation
 
-The final implementation differs quite a lot from the design. The implementation has been built by using a test-driven development workflow. Please check out the tests (`HangmanTests/*.swift`) to get a better understanding of the code. The models have been built inside out; the chronological order of implementation is as follows:
+The final implementation differs quite a lot from the design.
+
+#### Models
+
+The models have been built by using a test-driven development workflow. Please check out the tests (`HangmanTests/*.swift`) to get a better understanding of the code. The chronological order of implementation is as follows:
 
 1. `Guess`
 2. `Engine`
@@ -62,3 +66,9 @@ The final implementation differs quite a lot from the design. The implementation
 8. `Highscore`
 9. `Progress`
 10. `ProgressSlot`
+
+#### Pièce de résistance
+
+The display of the game state deserves some explanation. The amount of `A`s on the screen is dependent on the amount of maximum incorrect guesses. The (non-)transparency of letters is controlled by the amount of incorrectly guessed letters so far. The tests for the mathematics behind this can be seen in `HangmanTests/ProgressTests.swift`.
+
+![](Media/hangman_letters.png)
